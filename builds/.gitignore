@@ -1,0 +1,4 @@
+# Keep export outputs local while preserving this folder's configuration.
+*
+!.gitignore
+!.gdignore
