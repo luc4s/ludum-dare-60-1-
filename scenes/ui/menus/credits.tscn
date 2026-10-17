@@ -1,0 +1,54 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scenes/ui/menus/credits.gd" id="1_credits"]
+
+[node name="Credits" type="RichTextLabel" unique_id=16584375]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+text = "[b][font_size=32]Collaborators[/font_size][/b]
+
+[b][font_size=26]Participants[/font_size][/b]
+7uc4s
+Fullbuff
+Kaze Todoroki
+510
+Maximence
+...
+
+[b][font_size=26]Coding[/font_size][/b]
+...
+
+[b][font_size=26]Sprites & UIs[/font_size][/b]
+...
+
+[b][font_size=26]Musics & Sounds[/font_size][/b]
+...
+
+[b][font_size=32]Tools[/font_size][/b]
+
+[b][font_size=26]Game dev[/font_size][/b]
+[url=https://godotengine.org/]Godot Engine[/url] 
+[url=https://github.com/Maaack/Godot-Game-Template]Godot-addon: Godot-Game-Template[/url] 
+
+[b][font_size=26]Sounds/Music[/font_size][/b]
+...
+
+[b][font_size=26]Graphics[/font_size][/b]
+...
+"
+horizontal_alignment = 1
+script = ExtResource("1_credits")
+attribution_file_path = "res://ATTRIBUTION.md"
+h1_font_size = 40
+h2_font_size = 32
+h3_font_size = 26
+h4_font_size = 24
+h5_font_size = 22
+h6_font_size = 20
+bold_headings = true
+max_image_width = 80

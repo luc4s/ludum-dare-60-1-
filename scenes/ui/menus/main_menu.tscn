@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="PackedScene" path="res://addons/maaacks_game_template/base/nodes/menus/main_menu/main_menu.tscn" id="1_menu"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menus/options_window.tscn" id="2_options"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menus/credits_window.tscn" id="3_credits"]
+[ext_resource type="AudioStream" path="res://assets/audio/music/MUS_Menu.ogg" id="4_menu_music"]
+
+[node name="MainMenu" instance=ExtResource("1_menu")]
+options_packed_scene = ExtResource("2_options")
+credits_packed_scene = ExtResource("3_credits")
+
+[node name="BackgroundMusicPlayer" parent="." index="0"]
+stream = ExtResource("4_menu_music")
+
+[node name="TitleLabel" parent="MenuContainer/TitleMargin/TitleContainer" index="0"]
+text = "Ludum Dare 60"
+auto_update = false
+
+[node name="SubTitleLabel" parent="MenuContainer/SubTitleMargin/SubTitleContainer" index="0"]
+visible = false
+
+[node name="MenuButtonsBoxContainer" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer" index="0"]
+offset_left = -128.0
+offset_top = -144.0
+offset_right = 128.0
+offset_bottom = 144.0
+
+[node name="NewGameButton" parent="MenuContainer/MenuButtonsMargin/MenuButtonsContainer/MenuButtonsBoxContainer" index="0"]
+text = "Play"
+
+[node name="VersionMargin" parent="." index="3"]
+visible = false

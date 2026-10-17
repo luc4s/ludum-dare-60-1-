@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="PackedScene" path="res://addons/maaacks_music_controller/base/scenes/autoloads/project_music_controller.tscn" id="1_controller"]
+[ext_resource type="Script" path="res://scenes/audio/project_music_controller.gd" id="2_cleanup"]
+
+[node name="ProjectMusicController" instance=ExtResource("1_controller")]
+script = ExtResource("2_cleanup")
+fade_out_duration = 0.5
+fade_in_duration = 0.5
+empty_streams_stop_player = true

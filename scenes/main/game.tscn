@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://cdfc1bruai13m"]
+
+[ext_resource type="PackedScene" path="res://scenes/levels/base_level.tscn" id="1_level"]
+[ext_resource type="Script" uid="uid://cyh0d64pfygbl" path="res://addons/maaacks_game_template/base/nodes/utilities/pause_menu_controller.gd" id="2_pause_controller"]
+[ext_resource type="PackedScene" path="res://scenes/ui/menus/pause_menu.tscn" id="3_pause_menu"]
+[ext_resource type="PackedScene" path="res://scenes/audio/background_music_player.tscn" id="4_music_player"]
+
+[sub_resource type="Environment" id="Environment_base"]
+background_mode = 1
+background_color = Color(0.055, 0.065, 0.09, 1)
+ambient_light_source = 3
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.4
+
+[node name="Game" type="Node3D" unique_id=1891015991]
+
+[node name="BackgroundMusicPlayer" parent="." instance=ExtResource("4_music_player")]
+
+[node name="BaseLevel" parent="." unique_id=67512710 instance=ExtResource("1_level")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1182872313]
+environment = SubResource("Environment_base")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=690255671]
+transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.9659258, 0, 2, 5)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1170643379]
+transform = Transform3D(0.8660254, 0.35355338, -0.35355338, 0, 0.70710677, 0.70710677, 0.5, -0.6123724, 0.6123724, 0, 0, 0)
+
+[node name="PauseMenuController" type="Node" parent="." unique_id=1386825773]
+script = ExtResource("2_pause_controller")
+pause_menu_packed = ExtResource("3_pause_menu")
