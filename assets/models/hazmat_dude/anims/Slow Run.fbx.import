@@ -4,12 +4,12 @@ importer="animation_library"
 importer_version=1
 type="AnimationLibrary"
 uid="uid://b48d1xsjqbcnu"
-path="res://.godot/imported/Slow Run.fbx-34873f37211e770a93296318c2103f5b.res"
+path="res://.godot/imported/Slow Run.fbx-296ea95ef72f4915e8a7a438347b936d.res"
 
 [deps]
 
-source_file="res://assets/models/hazmat_dude/Slow Run.fbx"
-dest_files=["res://.godot/imported/Slow Run.fbx-34873f37211e770a93296318c2103f5b.res"]
+source_file="res://assets/models/hazmat_dude/anims/Slow Run.fbx"
+dest_files=["res://.godot/imported/Slow Run.fbx-296ea95ef72f4915e8a7a438347b936d.res"]
 
 [params]
 
