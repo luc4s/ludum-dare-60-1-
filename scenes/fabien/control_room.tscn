@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cnojk3lvapbe0"]
+
+[ext_resource type="Script" uid="uid://5wcw07663k7p" path="res://scenes/fabien/player.gd" id="1_0u6sh"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_36uvv"]
+size = Vector3(30, 0.2, 30)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_36uvv"]
+size = Vector3(30, 0.2, 30)
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_36uvv"]
+radius = 0.4
+height = 1.8
+
+[node name="ControlRoom" type="Node3D" unique_id=1972952121]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1789307436]
+transform = Transform3D(0.8571673, -0.3538762, 0.3742136, 0, 0.72657466, 0.6870875, -0.5150381, -0.5889489, 0.62279606, 0, 0, 0)
+
+[node name="Sol plan" type="StaticBody3D" parent="." unique_id=1922217209]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Sol plan" unique_id=463235624]
+mesh = SubResource("BoxMesh_36uvv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sol plan" unique_id=627618178]
+shape = SubResource("BoxShape3D_36uvv")
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=1319167622]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+script = ExtResource("1_0u6sh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player" unique_id=1562510689]
+shape = SubResource("CapsuleShape3D_36uvv")
+
+[node name="Camera3D" type="Camera3D" parent="Player" unique_id=1240169332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
